@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ローラ姫</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                background-color: yellow;
+            }
+            h1{
+                color:green;
+                text-align: center;
+            }
+        </style>
+        <script>
+            alert('ローラもおともしとうございます。');
+            //let...内容が変わる変数 const...内容が変わらない（定数）var...古いので使わない。
+            let agreed = false;
+            //反復構造 for...回数が決まっている while...回数が決まっていない
+            while(!agreed) {    //  非同意（つれていかない）状態のときは繰り返す。while(値){値がtrueの場合動作を繰り返す}
+                agreed = confirm('このローラもつれてってくださいますわね。');
+                // !agreed（非同意の場合）のとき繰り返す文。
+                if(!agreed) {
+                    alert('そんな ひどい・・・');
+                }
+            // 同意した際はループを抜ける。    
+            }
+            alert('うれしゅうございます。ぽっ');
+        </script>    
+    </head>
+    <body>
+        <h1>ゲームクリア！</h1>
+    </body>
+</html>

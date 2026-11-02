@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>数当てゲーム</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //1~10の乱数（整数）
+            const random = Math.random();
+            const answer = Math.floor(random * 10) + 1;
+            //情報の宣言(ユーザー入力値)
+            let input = 0;
+            // 前回入力した値
+            let previousInput = null;
+            //入力回数
+            let count = 0;
+            //正解でない間は繰り返す。while(値){値がtrueの場合実行}
+            while(input != answer) {
+                input = prompt('数字を入れてください。 (1～10)');
+                //入力するたびにカウント増加
+                count++;
+                if (input < answer) {
+                    alert(
+                        '数字が小さいです。\n' +
+                        '今回の入力：' + input + '\n' +
+                        '前回の入力：' +
+                        (previousInput === null ? 'なし' : previousInput)
+                    );
+                }
+                else if (input > answer) {
+                    alert(
+                        '数字が大きいです。\n' +
+                        '今回の入力：' + input + '\n' +
+                        '前回の入力：' +
+                        (previousInput === null ? 'なし' : previousInput)
+                    );
+                }
+                else {
+                    alert('正解です。');
+                    alert(count + '回で正解しました！');
+                }
+                previousInput = input;
+            }
+        </script>
+        <h1 style="font-size:500px; text-align: center; margin: auto; ">👍</h1>
+    </body>
+</html>
